@@ -16,7 +16,10 @@ const Navbar = (props: Props) => {
     color={palette.grey[300]}>
         {/* {Left Side} */}
         <FlexBetween gap="0.75rem">
-            <PixIcon/>
+            <PixIcon sx={{fontSize:'28px'}}/>
+            <Typography variant='h4' fontSize='16px'>
+                Finanseer
+            </Typography>
         </FlexBetween>
     
     </FlexBetween>
