@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
-
+import kpiRoutes from './routes/kpi.js'
 import dotenv from 'dotenv';
 import helmet from 'helmet';    
 import morgan from 'morgan';
@@ -18,6 +18,9 @@ app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
+
+// Routes
+app.use("/kpi",kpiRoutes)
 
 console.log('good')
 
