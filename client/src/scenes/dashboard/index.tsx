@@ -4,7 +4,7 @@ import Row2 from './Row2';
 import Row3 from './Row3';
 
 
-type Props = {}
+
 
 const gridTemplateLargeScreens=`
 "a b c"
@@ -51,7 +51,7 @@ const gridTemplateSmallScreens=`
  "j"
 `
 
-const  Dashboard = (props: Props) => {
+const  Dashboard = () => {
     const isAboveMediumScreens=useMediaQuery("(min-width:1200px")
   return <Box width='100%'
   height='100%'
