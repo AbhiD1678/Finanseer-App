@@ -1,5 +1,7 @@
-import DashBoardBox from '@/components/Dashboard';
 import { Box,useMediaQuery } from '@mui/material'
+import Row1 from './Row1';
+import Row2 from './Row2';
+import Row3 from './Row3';
 
 
 type Props = {}
@@ -69,16 +71,9 @@ const  Dashboard = (props: Props) => {
 }
   > 
   
-  <DashBoardBox gridArea='a' ></DashBoardBox>
-  <DashBoardBox gridArea='b' ></DashBoardBox>
-  <DashBoardBox gridArea='c' ></DashBoardBox>
-  <DashBoardBox gridArea='d' ></DashBoardBox>
-  <DashBoardBox gridArea='e' ></DashBoardBox>
-  <DashBoardBox gridArea='f' ></DashBoardBox>
-  <DashBoardBox gridArea='g' ></DashBoardBox>
-  <DashBoardBox gridArea='h' ></DashBoardBox>
-  <DashBoardBox gridArea='i' ></DashBoardBox>
-  <DashBoardBox gridArea='j' ></DashBoardBox>
+  <Row1 />
+  <Row2 />
+  <Row3 />
    </Box>
   
 }
