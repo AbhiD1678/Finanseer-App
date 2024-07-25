@@ -230,3 +230,7 @@ const Row1 = () => {
 }
 
 export default Row1
+
+// First one is the AreaChart which shows the revenue and expenses of the company over the months. The second one is the LineChart which shows the profit and revenue of the company over the months. The third one is the BarChart which shows the monthly revenue of the company.
+// Second one is the biaxial chart which shows the profit and revenue of the company over the months. The third one is the BarChart which shows the monthly revenue of the company.
+//Third One is the Bar chart which shows monthly profits of the company. The first one is the AreaChart which shows the revenue and expenses of the company over the months. The second one is the LineChart which shows the profit and revenue of the company over the months.
