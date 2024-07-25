@@ -7,6 +7,9 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';    
 import morgan from 'morgan';
 
+import KPI from './models/KPI.js';
+import {kpis} from './data/data.js'
+
 // Configurations
 
 dotenv.config();
@@ -22,18 +25,19 @@ app.use(cors());
 // Routes
 app.use("/kpi",kpiRoutes)
 
-console.log('good')
+console.log('all good')
+
 
 // Mongoose Setup
 
 const PORT=process.env.PORT || 9000;
 
 mongoose
-.connect(process.env.MONGO_URL,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-})
+.connect(process.env.MONGO_URL)
 .then(async()=>{
-    app.listen(PORT,()=>console.log(`Server is running on port ${PORT}`))
+    app.listen(PORT,()=>console.log(`Server is running on port ${PORT}`));
+// Add data one time only or as required
+    // await mongoose.connection.db.dropDatabase();// used to drop the previous database
+    // KPI.insertMany(kpis);
 })
 .catch((error)=>console.log(`${error} did not connect`))

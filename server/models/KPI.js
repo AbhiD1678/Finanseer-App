@@ -9,12 +9,12 @@ const daySchema=new Schema(
     {
         date:String,
         revenue:{
-            type:moongoose.Types.Currency,
+            type:mongoose.Types.Currency,
             Currency:"INR",
             get:(v)=>v/100
         },
         expenses:{
-            type:moongoose.Types.Currency,
+            type:mongoose.Types.Currency,
             Currency:"INR",
             get:(v)=>v/100
         },
@@ -29,22 +29,22 @@ const monthSchema=new Schema(
     {
         month:String,
         revenue:{
-            type:moongoose.Types.Currency,
+            type:mongoose.Types.Currency,
             Currency:"INR",
             get:(v)=>v/100
         },
         expenses:{
-            type:moongoose.Types.Currency,
+            type:mongoose.Types.Currency,
             Currency:"INR",
             get:(v)=>v/100
         },
         operationalExpenses:{
-            type:moongoose.Types.Currency,
+            type:mongoose.Types.Currency,
             Currency:"INR",
             get:(v)=>v/100
         },
         nonOperationalExpenses:{
-            type:moongoose.Types.Currency,
+            type:mongoose.Types.Currency,
             Currency:"INR",
             get:(v)=>v/100
         },
@@ -54,25 +54,25 @@ const monthSchema=new Schema(
 )
 const KPISchema=new Schema({
     totalProfit:{
-        type:moongoose.Types.Currency,
+        type:mongoose.Types.Currency,
         Currency:"INR",
         get:(v)=>v/100
     },
     totalRevenue:{
-        type:moongoose.Types.Currency,
+        type:mongoose.Types.Currency,
         Currency:"INR",
         get:(v)=>v/100
 
     },
     totalExpenses:{
-    type:moongoose.Types.Currency,
+    type:mongoose.Types.Currency,
     Currency:"INR",
     get:(v)=>v/100
     },
     expensesByCategory:{
         type:Map,
         of:{
-            type:moongoose.Types.Currency,
+            type:mongoose.Types.Currency,
             Currency:"INR",
             get:(v)=>v/100
 
@@ -86,3 +86,6 @@ const KPISchema=new Schema({
 
 
 const KPI = mongoose.model("KPI",KPISchema);
+
+
+export default KPI;
