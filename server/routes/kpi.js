@@ -9,7 +9,8 @@ router.get("/kpis",async(req,res)=>{
         res.status(200).json(kpis);
     }
     catch(error){
-        res.statue(404).json({message:error.message});
+        console.error(error);
+        res.status(500).json({message:error.message});
     }
 })
 

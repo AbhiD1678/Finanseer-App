@@ -14,9 +14,9 @@ import {kpis} from './data/data.js'
 
 dotenv.config();
 const app=express();
-app.use(express.json);
-app.use(helmet);
-app.use(helmet.crossOriginResourcePolicy({policy:"cross-origin"}));
+app.use(express.json());
+app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy:"cross-origin"}));
 app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
@@ -33,10 +33,11 @@ console.log('all good')
 const PORT=process.env.PORT || 9000;
 
 mongoose
-.connect(process.env.MONGO_URL)
+.connect(process.env.MONGO_URL,{
+})
 .then(async()=>{
     app.listen(PORT,()=>console.log(`Server is running on port ${PORT}`));
-// Add data one time only or as required
+//Add data one time only or as required
     // await mongoose.connection.db.dropDatabase();// used to drop the previous database
     // KPI.insertMany(kpis);
 })
