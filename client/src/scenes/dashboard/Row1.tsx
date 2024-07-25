@@ -173,7 +173,7 @@ const Row1 = () => {
       </DashBoardBox>
   
   
-  // Bar chart
+  {/* // Bar chart */}
   <DashBoardBox gridArea='c' >
   <BoxHeader
       title='Monthly Revenue'

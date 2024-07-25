@@ -28,3 +28,5 @@ export const api = createApi({
 export const useGetKpisQuery = api.useGetKpisQuery as typeof api.useGetKpisQuery;
 
 export const useGetProductsQuery = api.useGetProductsQuery as typeof api.useGetProductsQuery;
+
+export const useGetTransactionsQuery = api.useGetTransactionsQuery as typeof api.useGetTransactionsQuery;
