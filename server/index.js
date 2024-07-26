@@ -36,6 +36,9 @@ console.log('all good')
 
 app.use("/transaction", transactionRoutes);
 
+app.use("/",(req,res)=>{
+    res.send("Welcome to the backend,Created by Abhishek for his Finanseer project")
+})
 
 // Mongoose Setup
 
