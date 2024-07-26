@@ -5,9 +5,9 @@ import PixIcon from '@mui/icons-material/Pix';
 import FlexBetween from '@/components/FlexBetween';
 
 
-type Props = {};
 
-const Navbar = (props: Props) => {
+
+const Navbar = () => {
     const { palette }=useTheme();
     const [selected,setSelected]=useState('dashboard'); /*To know which page is selected,the default value is set to dashboard*/ 
     return <FlexBetween 
