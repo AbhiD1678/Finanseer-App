@@ -47,9 +47,9 @@ mongoose
 .then(async()=>{
     app.listen(PORT,()=>console.log(`Server is running on port ${PORT}`));
 //Add data one time only or as required
-    await mongoose.connection.db.dropDatabase();// used to drop the previous database
-    KPI.insertMany(kpis);
-    Product.insertMany(products);
-    Transaction.insertMany(transactions);
+    //await mongoose.connection.db.dropDatabase();// used to drop the previous database
+    //KPI.insertMany(kpis);
+    //Product.insertMany(products);
+    //Transaction.insertMany(transactions);
 })
 .catch((error)=>console.log(`${error} did not connect`))
